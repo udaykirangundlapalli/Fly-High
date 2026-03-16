@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly High | Premium Discovery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <header class="navbar-glass">
+        <a href="#" class="logo">Fly<span>High</span></a>
+        <nav class="nav-links d-flex align-items-center">
+            <a href="#sectionHome">Home</a>
+            <a href="#sectionTrending">Trending</a>
+            <a href="#sectionExplore">Explore</a>
+            <a href="#sectionGallery">Gallery</a>
+            <a href="#sectionContact">Contact</a>
+            <button id="themeToggle" class="theme-toggle-btn ml-4" title="Toggle Dark/Light Mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sectionHome" class="hero position-relative">
+            <div id="particles-js"></div>
+            <div class="container text-center hero-content position-relative" style="z-index: 10;">
+                <h1 class="slide-up"><span id="typewriter-text"></span><span class="typewriter-cursor">|</span></h1>
+                <p class="fade-in">Real-time insights, weather, and maps for your next journey.</p>
+                <a href="#sectionExplore" class="btn-primary-custom d-inline-block text-decoration-none mt-3">Get Started</a>
+            </div>
+        </section>
+
+        <section id="sectionTrending" class="search-area pt-5 pb-5 alt-bg">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title slide-up">Trending Destinations</h2>
+                    <p class="text-muted-custom">Popular spots inspiring travelers right now.</p>
+                </div>
+                <div class="row" id="trendingResults"></div>
+            </div>
+        </section>
+
+        <section id="sectionExplore" class="search-area pb-5">
+            <div class="container py-5">
+                <div class="search-wrapper mx-auto text-center mb-5">
+                    <h2 class="section-title mb-4">Find Your Destination</h2>
+                    <input id="searchInput" type="search" placeholder="Search cities, countries..." class="search-input">
+                    <div class="category-pills mt-4 text-center">
+                        <button class="filter-pill" onclick="triggerSearch('Beautiful Beaches')">🏖️ Beaches</button>
+                        <button class="filter-pill" onclick="triggerSearch('Mountain Ranges')">⛰️ Mountains</button>
+                        <button class="filter-pill" onclick="triggerSearch('Historic Landmarks')">🏛️ Historic</button>
+                        <button class="filter-pill" onclick="triggerSearch('Modern Cities')">🏙️ Cities</button>
+                    </div>
+                </div>
+                <div id="spinner" class="d-none text-center mt-4">
+                    <div class="spinner-border" style="color: var(--accent); width: 3rem; height: 3rem;"></div>
+                </div>
+                <div class="row mt-5" id="searchResults"></div>
+            </div>
+        </section>
+
+        <section id="sectionFavorites" class="search-area pt-5 pb-5 alt-bg">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title slide-up">Your Saved Destinations</h2>
+                </div>
+                <div class="row" id="favoritesResults"></div>
+            </div>
+        </section>
+
+        <section id="sectionGallery" class="search-area pt-5 pb-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title slide-up">Traveler Inspiration</h2>
+                    <p class="text-muted-custom">A curated gallery of the world's most beautiful spots.</p>
+                </div>
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+        </section>
+
+        <section id="sectionContact" class="search-area pt-5 pb-5 alt-bg">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section-title slide-up mb-4">Get in Touch</h2>
+                        <p class="text-muted-custom mb-5">Have questions about your next trip? Send us a message.</p>
+                        
+                        <form id="contactForm" class="contact-form text-left shadow-sm">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control custom-input" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control custom-input" id="contactEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Message</label>
+                                <textarea class="form-control custom-input" id="contactMessage" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary-custom w-100 mt-3">Send Message</button>
+                            <div id="formSuccess" class="text-success mt-3 d-none text-center font-weight-bold">Message sent successfully!</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="mapModal" class="modal-overlay d-none">
+        <div class="modal-content"><button id="closeMapBtn" class="close-btn">×</button><div id="mapContainer" class="map-container"></div></div>
+    </div>
+
+    <div id="wikiModal" class="modal-overlay d-none">
+        <div class="modal-content" style="max-width: 600px;">
+            <button id="closeWikiBtn" class="close-btn">×</button>
+            <h3 id="wikiTitle" class="mb-3 font-weight-bold" style="color: var(--text-main);"></h3>
+            <div id="wikiLoader" class="text-center py-4 d-none"><div class="spinner-border" style="color: var(--accent);"></div></div>
+            <div id="wikiContent" class="wiki-scroll-area"></div>
+            <a id="wikiExternalLink" href="#" target="_blank" class="btn-primary-custom text-center d-block w-100 mt-4 text-decoration-none">Read Full Article</a>
+        </div>
+    </div>
+
+    <div id="lightboxModal" class="modal-overlay d-none">
+        <button id="closeLightboxBtn" class="close-btn" style="top: 20px; right: 30px;">×</button>
+        <img id="lightboxImg" src="" alt="Gallery Image" class="lightbox-img">
+    </div>
+
+    <footer class="pt-5 pb-3 alt-bg" style="border-top: 1px solid var(--border-color);">
+        <div class="container text-center"><p class="text-muted-custom">© 2026 Fly High. All rights reserved.</p></div>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Go to top">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.4-24.6 0-33.9l-144-144c-9.4-9.4-24.6-9.4-33.9 0l-144 144c-9.4 9.4-9.4 24.6 0 33.9 9.4 9.4 24.6 9.4 33.9 0l127.1-127.1z"></path></svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/* --- UI Components --- */
+.btn-primary-custom {
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-custom:hover { 
+    background: var(--accent-hover); 
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.search-input { 
+    width: 100%; 
+    padding: 20px 35px; 
+    border-radius: 50px; 
+    border: 2px solid var(--border-color); 
+    background: var(--input-bg);
+    color: var(--text-main);
+    font-size: 1.3rem;
+    transition: all 0.3s ease; 
+    box-shadow: var(--shadow);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Quick Categories */
+.filter-pill {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 10px 22px;
+    border-radius: 50px;
+    margin: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-pill:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Travel Cards */
+.travel-card { 
+    background: var(--card-bg) !important; 
+    border-radius: 20px; 
+    border: 1px solid var(--border-color) !important;
+    padding: 0 !important;
+    height: 100%;
+    transition: all 0.3s ease;
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.travel-card:hover { transform: translateY(-8px); }
+
+.card-img-top {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.weather-badge {
+    position: absolute; 
+    top: 15px; 
+    left: 15px;
+    background: var(--card-bg); 
+    backdrop-filter: blur(4px);
+    color: var(--text-main); 
+    padding: 6px 14px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--card-bg);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.favorite-btn:hover, .favorite-btn.active { color: var(--accent); transform: scale(1.1); }
+.travel-card .text-muted { color: var(--text-muted) !important; line-height: 1.6; }
+
+/* Contact Form */
+.contact-form {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+.custom-input {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 10px;
+    padding: 12px 20px;
+}
+.custom-input:focus {
+    background: var(--input-bg);
+    border-color: var(--accent);
+    color: var(--text-main);
+}
+
+/* Image Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow);
+}
+
+/* Modals & Lightbox */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+    z-index: 2000; display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden; transition: all 0.3s ease;
+}
+.modal-overlay.show { opacity: 1; visibility: visible; }
+
+.modal-content {
+    background: var(--card-bg); 
+    width: 90%; max-width: 800px; border-radius: 16px; padding: 20px; position: relative;
+    border: 1px solid var(--border-color);
+}
+.close-btn {
+    position: absolute; top: -15px; right: -15px; background: #ef4444; border: none;
+    color: #ffffff; font-size: 1.5rem; cursor: pointer; z-index: 10;
+    width: 40px; height: 40px; border-radius: 50%; transition: 0.3s;
+}
+.close-btn:hover { transform: scale(1.1); }
+.map-container iframe { width: 100%; height: 450px; border-radius: 12px; border: none; }
+
+.lightbox-img {
+    max-width: 90%; max-height: 90vh; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+.wiki-scroll-area { max-height: 50vh; overflow-y: auto; color: var(--text-muted); }
