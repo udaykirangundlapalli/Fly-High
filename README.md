@@ -1,4 +1,4 @@
-# 🌍 Travel Explorer
+# 🌍 Fly-High
 
 An interactive travel discovery web app that helps users explore destinations with real-time city information, live weather updates, and visually engaging UI effects.
 
