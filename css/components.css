@@ -49,6 +49,10 @@
     padding: 0 0.9rem;
 }
 
+.nav-links .theme-toggle-btn {
+    justify-self: start;
+}
+
 .theme-toggle-btn:hover {
     transform: translateY(-1px);
     border-color: var(--accent);
@@ -518,6 +522,20 @@
 }
 
 @media (max-width: 767.98px) {
+    .btn-primary-custom,
+    .btn-secondary-custom,
+    .hero-shortcut,
+    .quick-tag,
+    .card-action-btn,
+    .nav-links .theme-toggle-btn {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.2rem 0;
+    }
+
     .search-wrapper,
     .search-aside,
     .contact-form,
@@ -526,8 +544,16 @@
         border-radius: 18px;
     }
 
+    .search-ideas {
+        padding-left: 1rem;
+    }
+
     .card-actions {
         flex-direction: column;
+    }
+
+    .weather-badge {
+        max-width: calc(100% - 76px);
     }
 
     .gallery-grid {

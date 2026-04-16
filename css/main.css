@@ -44,6 +44,7 @@ body {
     color: var(--text-main);
     margin: 0;
     line-height: 1.6;
+    overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -62,6 +63,7 @@ main {
 
 .section-shell {
     padding: 4.5rem 0;
+    scroll-margin-top: 5.5rem;
 }
 
 .section-heading {
@@ -532,10 +534,17 @@ main {
 
     .hero {
         padding-top: 6rem;
+        min-height: auto;
     }
 
     .hero-copy h1 {
         max-width: none;
+    }
+
+    .hero-copy,
+    .hero-panel,
+    .section-heading {
+        max-width: 100%;
     }
 }
 
@@ -553,6 +562,15 @@ main {
         flex-direction: column;
     }
 
+    .hero-trust {
+        gap: 0.55rem;
+    }
+
+    .hero-trust span {
+        width: 100%;
+        text-align: center;
+    }
+
     .hero-shortcuts {
         grid-template-columns: 1fr;
     }
@@ -561,8 +579,27 @@ main {
         font-size: clamp(2.35rem, 14vw, 3.5rem);
     }
 
+    .hero-lead,
+    .text-muted-custom {
+        font-size: 0.95rem;
+    }
+
     .navbar-glass {
         inset: 0;
         border-radius: 0;
+    }
+
+    .logo {
+        gap: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .logo-mark {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero-shell {
+        gap: 1rem;
     }
 }
