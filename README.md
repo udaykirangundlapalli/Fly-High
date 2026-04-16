@@ -1,30 +1,60 @@
-<p>Fly High is a modern, responsive web application designed for travelers to explore global destinations, check real-time weather, and curate their own personal travel bucket list.</p>
+# 🌍 Travel Explorer
 
-    <h2>🛠️ Built With</h2>
-    <ul>
-        <li><strong>HTML5 & CSS3:</strong> Custom layouts and glassmorphism animations.</li>
-        <li><strong>JavaScript (ES6):</strong> Asynchronous API handling and DOM manipulation.</li>
-        <li><strong>Bootstrap 4.6:</strong> Responsive grid system for cross-device compatibility.</li>
-        <li><strong>Particles.js:</strong> Interactive particle network for the hero background.</li>
-        <li><strong>Wikipedia API:</strong> Integration for real-time destination data sourcing.</li>
-        <li><strong>OpenWeather API:</strong> Fetching live weather data and conditions.</li>
-    </ul>
+An interactive travel discovery web app that helps users explore destinations with real-time city information, live weather updates, and visually engaging UI effects.
 
-    <h2>🌟 Features</h2>
-    <h3>🔍 Real-Time Discovery</h3>
-    <ul>
-        <li><strong>Live Wikipedia Search:</strong> Instantly retrieve city/country details via the Wikipedia API.</li>
-        <li><strong>Weather Insights:</strong> Live temperature and weather condition updates.</li>
-        <li><strong>Interactive Gallery:</strong> A curated, masonry-style gallery for visual travel inspiration.</li>
-    </ul>
+---
 
-    <h3>🌓 User Experience</h3>
-    <ul>
-        <li><strong>Dark/Light Mode:</strong> Seamless theme switching with persistence via <code>localStorage</code>.</li>
-        <li><strong>Favorites System:</strong> A personal bucket list that saves across browser sessions.</li>
-        <li><strong>Scroll Reveal:</strong> Smooth entrance animations for sections.</li>
-    </ul>
+## ✨ Overview
 
-    <h2>🚀 Getting Started</h2>
-    <p>To enable weather features, obtain an API key from <strong>OpenWeatherMap</strong>.</p>
-    <pre>
+Travel Explorer is designed for users who love discovering new places. Search cities or countries, view instant travel facts, check current weather conditions, and save dream destinations to your favorites list.
+
+The project combines modern frontend design with external APIs to create a smooth and immersive browsing experience.
+
+---
+
+## 🛠️ Built With
+
+- **HTML5 & CSS3** — Custom layouts, responsive styling, glassmorphism UI, animations  
+- **JavaScript (ES6)** — API integration, asynchronous logic, DOM manipulation  
+- **Bootstrap 4.6** — Mobile-friendly responsive grid system  
+- **Particles.js** — Interactive animated particle background  
+- **Wikipedia API** — Real-time destination information and summaries  
+- **OpenWeather API** — Live weather conditions and temperature data  
+
+---
+
+## 🌟 Features
+
+### 🔍 Real-Time Discovery
+
+- **Live Wikipedia Search**  
+  Instantly retrieve city or country information using the Wikipedia API.
+
+- **Weather Insights**  
+  View current temperature and weather conditions in real time.
+
+- **Interactive Gallery**  
+  Masonry-style image gallery for travel inspiration.
+
+---
+
+### 🌓 User Experience
+
+- **Dark / Light Mode**  
+  Smooth theme switching with saved preferences using `localStorage`.
+
+- **Favorites System**  
+  Create a personal travel bucket list that persists across sessions.
+
+- **Scroll Reveal Animations**  
+  Elegant entrance effects while scrolling through sections.
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/travel-explorer.git
+cd travel-explorer
