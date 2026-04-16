@@ -1,139 +1,294 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fly High | Premium Discovery</title>
+    <title>Fly High | Curated Travel Discovery</title>
+    <meta name="description" content="Discover destinations, save favorites, explore maps, and find inspiration for your next unforgettable trip.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="icon" href="assets/favicon.ico">
 </head>
 <body>
     <header class="navbar-glass">
-        <a href="#" class="logo">Fly<span>High</span></a>
-        <nav class="nav-links d-flex align-items-center">
+        <a href="#sectionHome" class="logo" aria-label="Fly High home">
+            <span class="logo-mark" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoWing" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f0a35b"></stop>
+                            <stop offset="100%" stop-color="#d96f32"></stop>
+                        </linearGradient>
+                    </defs>
+                    <rect x="6" y="6" width="52" height="52" rx="18" fill="url(#logoWing)"></rect>
+                    <path d="M17 38c10-1 16-7 21-18 1 7 4 12 9 16-8 1-13 3-18 9-1-4-4-6-12-7Z" fill="#fff7f2"></path>
+                    <circle cx="43" cy="20" r="4" fill="#fff7f2"></circle>
+                </svg>
+            </span>
+            <span class="logo-text">Fly<span>High</span></span>
+        </a>
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="siteNav" class="nav-links">
             <a href="#sectionHome">Home</a>
             <a href="#sectionTrending">Trending</a>
             <a href="#sectionExplore">Explore</a>
+            <a href="#sectionFavorites">Saved</a>
             <a href="#sectionGallery">Gallery</a>
             <a href="#sectionContact">Contact</a>
-            <button id="themeToggle" class="theme-toggle-btn ml-4" title="Toggle Dark/Light Mode">🌙</button>
+            <button id="themeToggle" class="theme-toggle-btn" title="Toggle dark or light mode" aria-label="Toggle dark or light mode">Moon</button>
         </nav>
     </header>
 
     <main>
-        <section id="sectionHome" class="hero position-relative">
+        <section id="sectionHome" class="hero">
+            <div class="hero-backdrop"></div>
             <div id="particles-js"></div>
-            <div class="container text-center hero-content position-relative" style="z-index: 10;">
-                <h1 class="slide-up"><span id="typewriter-text"></span><span class="typewriter-cursor">|</span></h1>
-                <p class="fade-in">Real-time insights, weather, and maps for your next journey.</p>
-                <a href="#sectionExplore" class="btn-primary-custom d-inline-block text-decoration-none mt-3">Get Started</a>
+            <div class="container hero-shell">
+                <div class="hero-copy">
+                    <p class="eyebrow fade-in">Curated travel discovery</p>
+                    <h1 class="slide-up"><span id="typewriter-text"></span><span class="typewriter-cursor">|</span></h1>
+                    <p class="hero-lead fade-in">Find destinations with mood, context, maps, and save-worthy inspiration instead of generic lists.</p>
+                    <div class="hero-actions fade-in">
+                        <a href="#sectionExplore" class="btn-primary-custom btn-pulse text-decoration-none">Start Exploring</a>
+                        <a href="#sectionTrending" class="btn-secondary-custom text-decoration-none">View Trending Picks</a>
+                    </div>
+                    <div class="hero-trust fade-in">
+                        <span>Fast search</span>
+                        <span>Save favorites</span>
+                        <span>Map and guide in one place</span>
+                    </div>
+                    <div class="hero-shortcuts fade-in">
+                        <button class="hero-shortcut" type="button" onclick="triggerSearch('Romantic European capitals')">
+                            <strong>Romantic cities</strong>
+                            <span>Paris, Florence, Prague</span>
+                        </button>
+                        <button class="hero-shortcut" type="button" onclick="triggerSearch('Tropical island escapes')">
+                            <strong>Tropical escapes</strong>
+                            <span>Bali, Maldives, Seychelles</span>
+                        </button>
+                        <button class="hero-shortcut" type="button" onclick="triggerSearch('Mountain adventure trips')">
+                            <strong>Mountain journeys</strong>
+                            <span>Swiss Alps, Patagonia, Banff</span>
+                        </button>
+                    </div>
+                    <div class="hero-metrics fade-in">
+                        <div class="metric-card">
+                            <strong>90+</strong>
+                            <span>inspiration prompts</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>Live</strong>
+                            <span>weather snapshots</span>
+                        </div>
+                        <div class="metric-card">
+                            <strong>1 click</strong>
+                            <span>save to favorites</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="hero-panel fade-in">
+                    <p class="panel-label">Journey briefing</p>
+                    <h2>Choose a travel vibe and let the site guide the shortlist.</h2>
+                    <div class="brief-list">
+                        <div class="brief-item">
+                            <span>01</span>
+                            <p>Search by city, country, or travel mood.</p>
+                        </div>
+                        <div class="brief-item">
+                            <span>02</span>
+                            <p>Open maps and quick Wikipedia summaries in place.</p>
+                        </div>
+                        <div class="brief-item">
+                            <span>03</span>
+                            <p>Build your personal shortlist in saved destinations.</p>
+                        </div>
+                    </div>
+                    <div class="hero-feature-callout">
+                        <p class="aside-label">Featured search</p>
+                        <strong>Tonight's best first click</strong>
+                        <p>Start with design-forward cities if you want the quickest mix of food, culture, and nightlife.</p>
+                        <button class="btn-secondary-custom hero-panel-btn" type="button" onclick="triggerSearch('Design-forward modern cities')">Explore curated city picks</button>
+                    </div>
+                </aside>
             </div>
         </section>
 
-        <section id="sectionTrending" class="search-area pt-5 pb-5 alt-bg">
-            <div class="container py-5">
-                <div class="text-center mb-5">
+        <section class="editorial-strip">
+            <div class="container">
+                <div class="editorial-grid">
+                    <article class="editorial-card">
+                        <p class="editorial-kicker">For planners</p>
+                        <h3>Compare scenic escapes, cities, and landmarks fast.</h3>
+                    </article>
+                    <article class="editorial-card">
+                        <p class="editorial-kicker">For dreamers</p>
+                        <h3>Use the gallery as a moodboard before you commit.</h3>
+                    </article>
+                    <article class="editorial-card">
+                        <p class="editorial-kicker">For return visits</p>
+                        <h3>Keep favorite places ready for your next trip discussion.</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="sectionTrending" class="search-area alt-bg section-shell">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <p class="eyebrow">Popular now</p>
                     <h2 class="section-title slide-up">Trending Destinations</h2>
-                    <p class="text-muted-custom">Popular spots inspiring travelers right now.</p>
+                    <p class="text-muted-custom">A richer starting point for travelers who want ideas that already feel vivid.</p>
                 </div>
                 <div class="row" id="trendingResults"></div>
             </div>
         </section>
 
-        <section id="sectionExplore" class="search-area pb-5">
-            <div class="container py-5">
-                <div class="search-wrapper mx-auto text-center mb-5">
-                    <h2 class="section-title mb-4">Find Your Destination</h2>
-                    <input id="searchInput" type="search" placeholder="Search cities, countries..." class="search-input">
-                    <div class="category-pills mt-4 text-center">
-                        <button class="filter-pill" onclick="triggerSearch('Beautiful Beaches')">🏖️ Beaches</button>
-                        <button class="filter-pill" onclick="triggerSearch('Mountain Ranges')">⛰️ Mountains</button>
-                        <button class="filter-pill" onclick="triggerSearch('Historic Landmarks')">🏛️ Historic</button>
-                        <button class="filter-pill" onclick="triggerSearch('Modern Cities')">🏙️ Cities</button>
+        <section id="sectionExplore" class="search-area section-shell">
+            <div class="container">
+                <div class="explore-layout">
+                    <div class="search-wrapper">
+                        <p class="eyebrow">Smart lookup</p>
+                        <h2 class="section-title mb-3">Find your next destination</h2>
+                        <p class="text-muted-custom mb-4">Search a place directly or begin with a mood to uncover fresh options.</p>
+                        <input id="searchInput" type="search" placeholder="Search cities, countries, coastlines..." class="search-input" aria-label="Search destinations">
+                        <p class="search-helper mb-0">Try a place like <button class="inline-link-btn" type="button" onclick="triggerSearch('Kyoto')">Kyoto</button>, <button class="inline-link-btn" type="button" onclick="triggerSearch('Amalfi Coast')">Amalfi Coast</button>, or <button class="inline-link-btn" type="button" onclick="triggerSearch('Tropical islands')">Tropical islands</button>.</p>
+                        <div class="category-pills mt-4">
+                            <button class="filter-pill" onclick="triggerSearch('Beautiful beaches')">Beaches</button>
+                            <button class="filter-pill" onclick="triggerSearch('Mountain escapes')">Mountains</button>
+                            <button class="filter-pill" onclick="triggerSearch('Historic landmarks')">Historic</button>
+                            <button class="filter-pill" onclick="triggerSearch('Design-forward modern cities')">Cities</button>
+                        </div>
                     </div>
+                    <aside class="search-aside">
+                        <p class="aside-label">Search ideas</p>
+                        <ul class="search-ideas">
+                            <li>Romantic European capitals</li>
+                            <li>Tropical islands with calm beaches</li>
+                            <li>Snowy alpine villages</li>
+                            <li>Creative cities with nightlife</li>
+                        </ul>
+                        <div class="quick-tags" aria-label="Popular quick tags">
+                            <button class="quick-tag" type="button" onclick="triggerSearch('Weekend city breaks')">Weekend trips</button>
+                            <button class="quick-tag" type="button" onclick="triggerSearch('Luxury beach resorts')">Luxury beaches</button>
+                            <button class="quick-tag" type="button" onclick="triggerSearch('Cultural food destinations')">Food cities</button>
+                        </div>
+                    </aside>
                 </div>
+
                 <div id="spinner" class="d-none text-center mt-4">
                     <div class="spinner-border" style="color: var(--accent); width: 3rem; height: 3rem;"></div>
                 </div>
+                <p id="resultsMeta" class="results-meta text-muted-custom d-none"></p>
                 <div class="row mt-5" id="searchResults"></div>
             </div>
         </section>
 
-        <section id="sectionFavorites" class="search-area pt-5 pb-5 alt-bg">
-            <div class="container py-5">
-                <div class="text-center mb-5">
-                    <h2 class="section-title slide-up">Your Saved Destinations</h2>
+        <section id="sectionFavorites" class="search-area alt-bg section-shell">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <p class="eyebrow">Your shortlist</p>
+                    <h2 class="section-title slide-up">Saved Destinations</h2>
+                    <p class="text-muted-custom">Keep places you love within reach while you compare routes, weather, and vibe.</p>
                 </div>
                 <div class="row" id="favoritesResults"></div>
             </div>
         </section>
 
-        <section id="sectionGallery" class="search-area pt-5 pb-5">
-            <div class="container py-5">
-                <div class="text-center mb-5">
-                    <h2 class="section-title slide-up">Traveler Inspiration</h2>
-                    <p class="text-muted-custom">A curated gallery of the world's most beautiful spots.</p>
+        <section id="sectionGallery" class="search-area section-shell">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <p class="eyebrow">Visual inspiration</p>
+                    <h2 class="section-title slide-up">Traveler Gallery</h2>
+                    <p class="text-muted-custom">A curated visual wall to help you feel the trip before you plan the itinerary.</p>
                 </div>
                 <div class="gallery-grid" id="galleryGrid"></div>
             </div>
         </section>
 
-        <section id="sectionContact" class="search-area pt-5 pb-5 alt-bg">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center">
-                        <h2 class="section-title slide-up mb-4">Get in Touch</h2>
-                        <p class="text-muted-custom mb-5">Have questions about your next trip? Send us a message.</p>
-                        
-                        <form id="contactForm" class="contact-form text-left shadow-sm">
-                            <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" class="form-control custom-input" id="contactName" required>
+        <section id="sectionContact" class="search-area alt-bg section-shell">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-copy">
+                        <p class="eyebrow">Stay connected</p>
+                        <h2 class="section-title slide-up mb-4">Plan the next journey with confidence.</h2>
+                        <p class="text-muted-custom mb-4">Use the form to ask about destination ideas, trip timing, or building a themed itinerary.</p>
+                        <div class="contact-points">
+                            <div>
+                                <strong>Fast inspiration</strong>
+                                <span>Search, save, and compare in minutes.</span>
                             </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control custom-input" id="contactEmail" required>
+                            <div>
+                                <strong>Better context</strong>
+                                <span>Open maps and summaries without leaving the page.</span>
                             </div>
-                            <div class="form-group">
-                                <label>Your Message</label>
-                                <textarea class="form-control custom-input" id="contactMessage" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary-custom w-100 mt-3">Send Message</button>
-                            <div id="formSuccess" class="text-success mt-3 d-none text-center font-weight-bold">Message sent successfully!</div>
-                        </form>
+                        </div>
                     </div>
+
+                    <form id="contactForm" class="contact-form" action="https://formsubmit.co/udayudhi04@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Fly High contact form message">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="index.html?sent=1#sectionContact">
+                        <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" class="form-control custom-input" id="contactName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" class="form-control custom-input" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea class="form-control custom-input" id="contactMessage" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary-custom w-100 mt-3">Send Message</button>
+                        <div id="formSuccess" class="text-success mt-3 d-none text-center font-weight-bold">Message sent successfully.</div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
     <div id="mapModal" class="modal-overlay d-none">
-        <div class="modal-content"><button id="closeMapBtn" class="close-btn">×</button><div id="mapContainer" class="map-container"></div></div>
+        <div class="modal-content">
+            <button id="closeMapBtn" class="close-btn" aria-label="Close map modal">&times;</button>
+            <div id="mapContainer" class="map-container"></div>
+        </div>
     </div>
 
     <div id="wikiModal" class="modal-overlay d-none">
-        <div class="modal-content" style="max-width: 600px;">
-            <button id="closeWikiBtn" class="close-btn">×</button>
-            <h3 id="wikiTitle" class="mb-3 font-weight-bold" style="color: var(--text-main);"></h3>
-            <div id="wikiLoader" class="text-center py-4 d-none"><div class="spinner-border" style="color: var(--accent);"></div></div>
+        <div class="modal-content wiki-modal">
+            <button id="closeWikiBtn" class="close-btn" aria-label="Close wiki modal">&times;</button>
+            <h3 id="wikiTitle" class="mb-3 font-weight-bold"></h3>
+            <div id="wikiLoader" class="text-center py-4 d-none">
+                <div class="spinner-border" style="color: var(--accent);"></div>
+            </div>
             <div id="wikiContent" class="wiki-scroll-area"></div>
-            <a id="wikiExternalLink" href="#" target="_blank" class="btn-primary-custom text-center d-block w-100 mt-4 text-decoration-none">Read Full Article</a>
+            <a id="wikiExternalLink" href="#" target="_blank" rel="noreferrer" class="btn-primary-custom text-center d-block w-100 mt-4 text-decoration-none">Read Full Article</a>
         </div>
     </div>
 
     <div id="lightboxModal" class="modal-overlay d-none">
-        <button id="closeLightboxBtn" class="close-btn" style="top: 20px; right: 30px;">×</button>
+        <button id="closeLightboxBtn" class="close-btn lightbox-close" aria-label="Close gallery image">&times;</button>
         <img id="lightboxImg" src="" alt="Gallery Image" class="lightbox-img">
     </div>
 
-    <footer class="pt-5 pb-3 alt-bg" style="border-top: 1px solid var(--border-color);">
-        <div class="container text-center"><p class="text-muted-custom">© 2026 Fly High. All rights reserved.</p></div>
+    <footer class="site-footer alt-bg">
+        <div class="container text-center">
+            <p class="text-muted-custom">© 2026 Fly High. Designed for travel ideas with more atmosphere.</p>
+        </div>
     </footer>
 
-    <button id="scrollTopBtn" class="scroll-top-btn" title="Go to top">
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Go to top" aria-label="Go to top">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.4-24.6 0-33.9l-144-144c-9.4-9.4-24.6-9.4-33.9 0l-144 144c-9.4 9.4-9.4 24.6 0 33.9 9.4 9.4 24.6 9.4 33.9 0l127.1-127.1z"></path></svg>
     </button>
 
