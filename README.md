@@ -24,19 +24,29 @@ Fly High is a modern, responsive travel discovery web application built for expl
 
 ## 📷 Visual Preview
 
+### App hero preview
+
 ![Fly High app preview](screenshots/hero-preview.svg)
 
-### Key sections
+A welcoming home section with hero messaging, navigation, and quick travel prompts.
 
-- **Explore & search** — quick destination lookup and mood-driven tags
-- **Saved Destinations** — favorites with weather and quick actions
-- **Traveler Gallery** — inspirational moodboard cards for planning
+### Explore & Search
 
 ![Search panel preview](screenshots/search-preview.svg)
 
+Search destinations, explore mood-based tags, and discover live travel ideas.
+
+### Saved Destinations
+
 ![Saved destinations preview](screenshots/favorites-preview.svg)
 
+Keep favorite places saved with weather details and easy access.
+
+### Traveler Gallery
+
 ![Traveler gallery preview](screenshots/gallery-preview.svg)
+
+Browse curated gallery cards to build travel inspiration and moodboards.
 
 ## 🚀 Getting Started
 
