@@ -26,7 +26,7 @@ Fly High is a modern, responsive travel discovery web application built for expl
 
 ### App hero preview
 
-![Fly High app preview](screenshots/hero-preview.svg)
+![Fly High app preview](screenshots\hero-preview.jpg)
 
 A welcoming home section with hero messaging, navigation, and quick travel prompts.
 
