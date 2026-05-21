@@ -30,6 +30,12 @@ Fly High is a modern, responsive travel discovery web application built for expl
 
 A welcoming home section with hero messaging, navigation, and quick travel prompts.
 
+### Trending Destinations
+
+![Trending destinations preview](screenshots/trending-preview.svg)
+
+A rich curated feed of destination cards, weather snapshots, and travel moods.
+
 ### Explore & Search
 
 ![Search panel preview](screenshots/search-preview.svg)
@@ -47,6 +53,12 @@ Keep favorite places saved with weather details and easy access.
 ![Traveler gallery preview](screenshots/gallery-preview.svg)
 
 Browse curated gallery cards to build travel inspiration and moodboards.
+
+### Stay Connected
+
+![Contact form preview](screenshots/contact-preview.svg)
+
+Use the contact section to ask about itinerary ideas, trip timing, or themed travel plans.
 
 ## 🚀 Getting Started
 
