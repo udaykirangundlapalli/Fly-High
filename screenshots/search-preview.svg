@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title subtitle">
+  <title id="title">Fly High search preview</title>
+  <desc id="subtitle">Illustration of the Fly High search, filters, and favorites panel.</desc>
+  <defs>
+    <linearGradient id="panelBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff9f2" />
+      <stop offset="100%" stop-color="#f7e3d0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="650" rx="24" fill="url(#panelBg)" />
+  <rect x="70" y="60" width="460" height="520" rx="34" fill="#ffffff" stroke="#f1d0b4" stroke-width="2" />
+  <text x="110" y="120" font-family="Manrope, sans-serif" font-size="28" fill="#3e2e25" font-weight="800">Find your next destination</text>
+  <rect x="110" y="150" width="360" height="56" rx="28" fill="#f7f1ee" />
+  <text x="130" y="186" font-family="Manrope, sans-serif" font-size="18" fill="#94786c">Search cities, countries, coastlines...</text>
+  <text x="110" y="235" font-family="Manrope, sans-serif" font-size="18" fill="#a17d69">Trending categories</text>
+  <g fill="#ffe7d6" stroke="#f2cab5" stroke-width="1">
+    <rect x="110" y="255" width="160" height="48" rx="24" />
+    <rect x="290" y="255" width="160" height="48" rx="24" />
+    <rect x="110" y="315" width="160" height="48" rx="24" />
+    <rect x="290" y="315" width="160" height="48" rx="24" />
+  </g>
+  <text x="140" y="288" font-family="Manrope, sans-serif" font-size="16" fill="#7b523d">Weekend trips</text>
+  <text x="320" y="288" font-family="Manrope, sans-serif" font-size="16" fill="#7b523d">Luxury beaches</text>
+  <text x="140" y="348" font-family="Manrope, sans-serif" font-size="16" fill="#7b523d">Food cities</text>
+  <text x="320" y="348" font-family="Manrope, sans-serif" font-size="16" fill="#7b523d">Mountain escapes</text>
+  <rect x="660" y="140" width="420" height="220" rx="30" fill="#ffffff" stroke="#f1d0b4" stroke-width="2" />
+  <text x="700" y="190" font-family="Manrope, sans-serif" font-size="24" fill="#3e2e25" font-weight="700">Saved destinations</text>
+  <rect x="700" y="220" width="120" height="42" rx="21" fill="#ff8f5a" />
+  <text x="722" y="248" font-family="Manrope, sans-serif" font-size="16" fill="#ffffff">Favorite</text>
+  <rect x="700" y="280" width="120" height="42" rx="21" fill="#f3c494" />
+  <text x="720" y="308" font-family="Manrope, sans-serif" font-size="16" fill="#7b523d">Saved</text>
+  <rect x="660" y="390" width="420" height="160" rx="30" fill="#fffbf8" stroke="#f2cab5" stroke-width="2" />
+  <text x="700" y="430" font-family="Manrope, sans-serif" font-size="22" fill="#664d40" font-weight="700">Live weather + wiki details</text>
+  <rect x="700" y="450" width="160" height="46" rx="23" fill="#ffffff" stroke="#f2cab5" stroke-width="1" />
+  <text x="720" y="481" font-family="Manrope, sans-serif" font-size="16" fill="#8f7a68">Clear · 24°C</text>
+  <rect x="880" y="450" width="160" height="46" rx="23" fill="#ffffff" stroke="#f2cab5" stroke-width="1" />
+  <text x="900" y="481" font-family="Manrope, sans-serif" font-size="16" fill="#8f7a68">Paris summary</text>
+</svg>

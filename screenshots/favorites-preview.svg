@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title subtitle">
+  <title id="title">Saved Destinations preview</title>
+  <desc id="subtitle">Illustration of the Fly High saved destinations and favorites section.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7f0" />
+      <stop offset="100%" stop-color="#f8e6d3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="650" rx="24" fill="url(#bg)" />
+  <rect x="90" y="70" width="1020" height="500" rx="36" fill="#ffffff" stroke="#eac7af" stroke-width="2" opacity="0.95" />
+  <text x="130" y="135" font-family="Manrope, sans-serif" font-size="34" fill="#3f2f26" font-weight="700">Saved Destinations</text>
+  <text x="130" y="175" font-family="Manrope, sans-serif" font-size="20" fill="#8a7060">Collect your favorite places with weather, wiki, and quick actions.</text>
+  <g fill="#fff" stroke="#f2c4a0" stroke-width="2">
+    <rect x="130" y="210" width="210" height="180" rx="26" />
+    <rect x="370" y="210" width="210" height="180" rx="26" />
+    <rect x="610" y="210" width="210" height="180" rx="26" />
+    <rect x="850" y="210" width="210" height="180" rx="26" />
+  </g>
+  <text x="150" y="260" font-family="Manrope, sans-serif" font-size="19" fill="#7d5a48" font-weight="700">Paris</text>
+  <text x="150" y="290" font-family="Manrope, sans-serif" font-size="16" fill="#a17a62">Clear · 24°C</text>
+  <text x="390" y="260" font-family="Manrope, sans-serif" font-size="19" fill="#7d5a48" font-weight="700">Kyoto</text>
+  <text x="390" y="290" font-family="Manrope, sans-serif" font-size="16" fill="#a17a62">Cloudy · 19°C</text>
+  <text x="630" y="260" font-family="Manrope, sans-serif" font-size="19" fill="#7d5a48" font-weight="700">Maldives</text>
+  <text x="630" y="290" font-family="Manrope, sans-serif" font-size="16" fill="#a17a62">Sunny · 30°C</text>
+  <text x="870" y="260" font-family="Manrope, sans-serif" font-size="19" fill="#7d5a48" font-weight="700">Banff</text>
+  <text x="870" y="290" font-family="Manrope, sans-serif" font-size="16" fill="#a17a62">Snow · -3°C</text>
+  <rect x="130" y="420" width="180" height="56" rx="28" fill="#ff8b57" />
+  <rect x="370" y="420" width="180" height="56" rx="28" fill="#f3c59e" />
+  <rect x="610" y="420" width="180" height="56" rx="28" fill="#ffd8c6" />
+  <rect x="850" y="420" width="180" height="56" rx="28" fill="#ffe7d5" />
+  <text x="175" y="455" font-family="Manrope, sans-serif" font-size="18" fill="#fff" font-weight="700">View</text>
+  <text x="415" y="455" font-family="Manrope, sans-serif" font-size="18" fill="#7c523f" font-weight="700">Map</text>
+  <text x="655" y="455" font-family="Manrope, sans-serif" font-size="18" fill="#7c523f" font-weight="700">Details</text>
+  <text x="895" y="455" font-family="Manrope, sans-serif" font-size="18" fill="#7c523f" font-weight="700">Saved</text>
+</svg>
